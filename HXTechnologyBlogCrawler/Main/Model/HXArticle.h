@@ -19,5 +19,6 @@
 @property (nonatomic,copy) NSString *readcount;
 @property (nonatomic,copy) NSString *homepage;
 @property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *findCount;
 
 @end

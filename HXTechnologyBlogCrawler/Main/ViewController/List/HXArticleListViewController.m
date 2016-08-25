@@ -18,6 +18,7 @@
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,copy) NSString *searchText;//搜索词
+@property (nonatomic,strong) UILabel *findCountLabel;
 @property (nonatomic,strong) NSMutableArray *dataAry;
 @property (nonatomic,strong) HXRequestManager *requestManager;
 
@@ -30,10 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
-    
-    self.title = [NSString stringWithFormat:@"搜索%@",_key];
-    
+    self.view.backgroundColor = [UIColor clearColor];
+
     _page = 1;
     _dataAry = [NSMutableArray new];
     
@@ -57,18 +56,32 @@
     [self.tableView.mj_header beginRefreshing];
 }
 
+- (UILabel *)findCountLabel {
+    if (!_findCountLabel) {
+        _findCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 30, self.view.frame.size.width, 30)];
+        _findCountLabel.backgroundColor = [UIColor grayColor];
+        _findCountLabel.textAlignment = NSTextAlignmentCenter;
+        _findCountLabel.font = [UIFont systemFontOfSize:12];
+        _findCountLabel.textColor = [UIColor whiteColor];
+        [self.view addSubview:_findCountLabel];
+    }
+    _findCountLabel.frame = CGRectMake(0, self.view.frame.size.height - 30, self.view.frame.size.width, 30);
+    return _findCountLabel;
+}
+
 - (void)request:(NSInteger)page {
     __weak __typeof(self)weakSelf = self;
-    [self.requestManager request:_key page:page complete:^(NSArray *dataAry) {
+    [self.requestManager requestWithBlogType:_blogType key:_key page:page complete:^(NSArray *dataAry,NSString *findCount) {
         __strong __typeof(self)self = weakSelf;
-        
-        if (page == 0) {
-            [_dataAry removeAllObjects];
-        }
         
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
         
+        if (page == 1) {
+            self.findCountLabel.text = [NSString stringWithFormat:@"为您找到相关结果约%@个",findCount];
+            [_dataAry removeAllObjects];
+        }
+
         [_dataAry addObjectsFromArray:dataAry];
         [self.tableView reloadData];
     }];
@@ -93,22 +106,7 @@
         cell = [[HXArticleListCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"HXArticleListCell"];
     }
     
-    HXArticle *article = self.dataSource[indexPath.row];
-    
-    //标题
-    [cell.titleButton setTitle:article.title forState:UIControlStateNormal];
-    //简述
-    cell.sketchLabel.text = article.sketch;
-    //作者
-    [cell.nameButton setTitle:article.name forState:UIControlStateNormal];
-    //时间
-    cell.timeLabel.text = article.time;
-    //推荐数
-    cell.recommendcountLabel.text = article.recommendcount.length > 0 ? article.recommendcount : @"推荐(0)";
-    //评论数
-    cell.commentcountLabel.text = article.commentcount.length > 0 ? article.commentcount : @"评论(0)";
-    //阅读数
-    cell.readcountLabel.text = article.readcount.length > 0 ? article.readcount : @"阅读(0)";
+    [cell setData:self.dataSource[indexPath.row] key:_key delegate:self];
     
     return cell;
 }
@@ -120,10 +118,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    HXArticle *article = self.dataSource[indexPath.row];
-    
-    [self gotoDetailWebViewController:article];
+}
+
+#pragma HXArticleListCellDelegate
+
+- (void)articleListCell:(HXArticleListCell *)cell titleButtonAction:(UIButton *)sender article:(HXArticle *)article {
+    [self gotoDetailWebViewController:article type:@"detail"];
+}
+
+- (void)articleListCell:(HXArticleListCell *)cell nameButtonAction:(UIButton *)sender article:(HXArticle *)article {
+    [self gotoDetailWebViewController:article type:@"home"];
 }
 
 #pragma mark - goto
@@ -131,9 +135,10 @@
 /**
  *  去文章详情界面
  */
-- (void)gotoDetailWebViewController:(HXArticle *)article {
+- (void)gotoDetailWebViewController:(HXArticle *)article type:(NSString *)type {
     HXDetailWebViewController *vc = [HXDetailWebViewController new];
     vc.article = article;
+    vc.type = type;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -141,7 +146,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 30) style:UITableViewStylePlain];
         _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         _tableView.dataSource = self;
         _tableView.delegate = self;

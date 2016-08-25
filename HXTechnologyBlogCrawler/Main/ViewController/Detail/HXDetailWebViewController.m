@@ -16,30 +16,31 @@
 
 @implementation HXDetailWebViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = _article.title;
-    
-    //1.创建并加载远程网页
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_article.url]]];
+    if ([_type isEqualToString:@"home"]) {
+        self.title = _article.name;
+        
+        //1.创建并加载远程网页
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_article.homepage]]];
+    } else if ([_type isEqualToString:@"detail"]) {
+        self.title = _article.title;
+        
+        //1.创建并加载远程网页
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_article.url]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+			
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

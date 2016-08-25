@@ -12,5 +12,6 @@
 @interface HXDetailWebViewController : UIViewController
 
 @property (strong, nonatomic) HXArticle *article;
+@property (copy, nonatomic) NSString *type;
 
 @end

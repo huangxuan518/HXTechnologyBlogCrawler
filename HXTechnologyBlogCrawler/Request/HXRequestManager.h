@@ -10,6 +10,6 @@
 
 @interface HXRequestManager : NSObject
 
-- (void)request:(NSString *)key page:(NSInteger)page complete:(void(^)(NSArray *dataAry))complete;
+- (void)requestWithBlogType:(NSString *)blogType key:(NSString *)key page:(NSInteger)page complete:(void(^)(NSArray *dataAry,NSString *findCount))complete;
 
 @end

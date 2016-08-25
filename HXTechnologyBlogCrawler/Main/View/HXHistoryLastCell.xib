@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HXHistoryLastCell" id="KGk-i7-Jjw" customClass="HXHistoryLastCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="19.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvx-VL-8Um">
+                        <rect key="frame" x="200" y="0.0" width="50" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="96X-g3-KRI"/>
+                            <constraint firstAttribute="height" constant="19" id="PJc-mh-Vz6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="删除历史">
+                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jPh-cU-2Un"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-tX-idi">
+                        <rect key="frame" x="260" y="0.0" width="50" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="RtC-Vx-m7n"/>
+                            <constraint firstAttribute="height" constant="19" id="jDy-PT-Vat"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="更多历史">
+                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="moreButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BNW-ah-yQK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1z-6v-WT5">
+                        <rect key="frame" x="253" y="5" width="4" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="ybf-5h-DUe"/>
+                            <constraint firstAttribute="width" constant="4" id="zlJ-bO-8zD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cSx-tX-idi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="09Z-aC-gp2"/>
+                    <constraint firstAttribute="trailing" secondItem="cSx-tX-idi" secondAttribute="trailing" constant="10" id="35Q-78-3Ec"/>
+                    <constraint firstItem="cSx-tX-idi" firstAttribute="leading" secondItem="n1z-6v-WT5" secondAttribute="trailing" constant="3" id="N44-Ve-Yyp"/>
+                    <constraint firstItem="cSx-tX-idi" firstAttribute="leading" secondItem="kvx-VL-8Um" secondAttribute="trailing" constant="10" id="Udx-fw-v9e"/>
+                    <constraint firstItem="kvx-VL-8Um" firstAttribute="centerY" secondItem="cSx-tX-idi" secondAttribute="centerY" id="fxg-KW-EoP"/>
+                    <constraint firstItem="n1z-6v-WT5" firstAttribute="centerY" secondItem="cSx-tX-idi" secondAttribute="centerY" id="vW2-IG-y8s"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+        </tableViewCell>
+    </objects>
+</document>

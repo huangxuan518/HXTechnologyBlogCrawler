@@ -25,6 +25,12 @@
 		E4A69BAC1D6AAE3300F84617 /* HXHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A69BA21D6AAE3300F84617 /* HXHomeViewController.xib */; };
 		E4A69BAD1D6AAE3300F84617 /* HXArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A69BA51D6AAE3300F84617 /* HXArticleListViewController.m */; };
 		E4A69BB11D6AD0D500F84617 /* HXArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A69BB01D6AD0D500F84617 /* HXArticle.m */; };
+		E4D7F0051D6EE57400F90383 /* HXHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D7F0031D6EE57400F90383 /* HXHistoryCell.m */; };
+		E4D7F0061D6EE57400F90383 /* HXHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D7F0041D6EE57400F90383 /* HXHistoryCell.xib */; };
+		E4D7F00A1D6EEB7100F90383 /* HXHistoryLastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D7F0081D6EEB7100F90383 /* HXHistoryLastCell.m */; };
+		E4D7F00B1D6EEB7100F90383 /* HXHistoryLastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D7F0091D6EEB7100F90383 /* HXHistoryLastCell.xib */; };
+		E4D7F00E1D6EEF6600F90383 /* HXHistoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D7F00D1D6EEF6600F90383 /* HXHistoryListViewController.m */; };
+		E4E19A981D6D86380005B850 /* HXSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E19A971D6D86380005B850 /* HXSearchResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,16 @@
 		E4A69BA51D6AAE3300F84617 /* HXArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXArticleListViewController.m; sourceTree = "<group>"; };
 		E4A69BAF1D6AD0D500F84617 /* HXArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXArticle.h; sourceTree = "<group>"; };
 		E4A69BB01D6AD0D500F84617 /* HXArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXArticle.m; sourceTree = "<group>"; };
+		E4D7F0021D6EE57400F90383 /* HXHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHistoryCell.h; sourceTree = "<group>"; };
+		E4D7F0031D6EE57400F90383 /* HXHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHistoryCell.m; sourceTree = "<group>"; };
+		E4D7F0041D6EE57400F90383 /* HXHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXHistoryCell.xib; sourceTree = "<group>"; };
+		E4D7F0071D6EEB7100F90383 /* HXHistoryLastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHistoryLastCell.h; sourceTree = "<group>"; };
+		E4D7F0081D6EEB7100F90383 /* HXHistoryLastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHistoryLastCell.m; sourceTree = "<group>"; };
+		E4D7F0091D6EEB7100F90383 /* HXHistoryLastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXHistoryLastCell.xib; sourceTree = "<group>"; };
+		E4D7F00C1D6EEF6600F90383 /* HXHistoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHistoryListViewController.h; sourceTree = "<group>"; };
+		E4D7F00D1D6EEF6600F90383 /* HXHistoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHistoryListViewController.m; sourceTree = "<group>"; };
+		E4E19A961D6D86380005B850 /* HXSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchResultViewController.h; sourceTree = "<group>"; };
+		E4E19A971D6D86380005B850 /* HXSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +190,12 @@
 				E4A69B971D6AAE3300F84617 /* HXArticleListCell.h */,
 				E4A69B981D6AAE3300F84617 /* HXArticleListCell.m */,
 				E4A69B991D6AAE3300F84617 /* HXArticleListCell.xib */,
+				E4D7F0021D6EE57400F90383 /* HXHistoryCell.h */,
+				E4D7F0031D6EE57400F90383 /* HXHistoryCell.m */,
+				E4D7F0041D6EE57400F90383 /* HXHistoryCell.xib */,
+				E4D7F0071D6EEB7100F90383 /* HXHistoryLastCell.h */,
+				E4D7F0081D6EEB7100F90383 /* HXHistoryLastCell.m */,
+				E4D7F0091D6EEB7100F90383 /* HXHistoryLastCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +235,10 @@
 			children = (
 				E4A69BA41D6AAE3300F84617 /* HXArticleListViewController.h */,
 				E4A69BA51D6AAE3300F84617 /* HXArticleListViewController.m */,
+				E4E19A961D6D86380005B850 /* HXSearchResultViewController.h */,
+				E4E19A971D6D86380005B850 /* HXSearchResultViewController.m */,
+				E4D7F00C1D6EEF6600F90383 /* HXHistoryListViewController.h */,
+				E4D7F00D1D6EEF6600F90383 /* HXHistoryListViewController.m */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -289,6 +315,8 @@
 				E4A69BA81D6AAE3300F84617 /* HXArticleListCell.xib in Resources */,
 				E4A69BAC1D6AAE3300F84617 /* HXHomeViewController.xib in Resources */,
 				E4A69BAA1D6AAE3300F84617 /* HXDetailWebViewController.xib in Resources */,
+				E4D7F0061D6EE57400F90383 /* HXHistoryCell.xib in Resources */,
+				E4D7F00B1D6EEB7100F90383 /* HXHistoryLastCell.xib in Resources */,
 				E49D47471D65670C004FE1E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +381,11 @@
 				E49D473F1D65670C004FE1E6 /* AppDelegate.m in Sources */,
 				E4A69BAB1D6AAE3300F84617 /* HXHomeViewController.m in Sources */,
 				E49D473C1D65670C004FE1E6 /* main.m in Sources */,
+				E4D7F00E1D6EEF6600F90383 /* HXHistoryListViewController.m in Sources */,
+				E4D7F0051D6EE57400F90383 /* HXHistoryCell.m in Sources */,
+				E4E19A981D6D86380005B850 /* HXSearchResultViewController.m in Sources */,
 				E49D47701D658FD2004FE1E6 /* TFHpple.m in Sources */,
+				E4D7F00A1D6EEB7100F90383 /* HXHistoryLastCell.m in Sources */,
 				E47972281D6830A400107AB1 /* HXRequestManager.m in Sources */,
 				E4A69BA91D6AAE3300F84617 /* HXDetailWebViewController.m in Sources */,
 				E49D47721D658FD2004FE1E6 /* XPathQuery.m in Sources */,
