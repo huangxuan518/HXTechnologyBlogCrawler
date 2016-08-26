@@ -134,8 +134,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:_tagAry forKey:@"tagAry"];
     [userDefaults synchronize];
-    [self changeTableViewHeight];
-    [_tableView reloadData];
+    _tableView.hidden = YES;
 }
 
 - (void)historyLastCell:(HXHistoryLastCell *)cell moreButtonAction:(UIButton *)sender {
