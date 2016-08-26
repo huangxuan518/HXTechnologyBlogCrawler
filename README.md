@@ -5,5 +5,5 @@
 https://appetize.io/app/1511my7qa48yeeacwb2t4ycd2m
 
 # 预览图
-![image](https://github.com/huangxuan518/HXTagsView/blob/master/HXTagsView/xiaoguo.gif)
+![image](https://github.com/huangxuan518/HXTechnologyBlogCrawler/blob/master/HXTechnologyBlogCrawler/xiaoguo.gif)
 
