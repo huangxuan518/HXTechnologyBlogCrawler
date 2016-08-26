@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4A0F42A33CC1E15C177DE4BB /* libPods-HXTechnologyBlogCrawler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87E942669A1B6F1637DA815 /* libPods-HXTechnologyBlogCrawler.a */; };
-		E411B6471D66E10E005E1F81 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E411B6461D66E10E005E1F81 /* CoreData.framework */; };
 		E47972281D6830A400107AB1 /* HXRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E47972271D6830A400107AB1 /* HXRequestManager.m */; };
 		E49D473C1D65670C004FE1E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49D473B1D65670C004FE1E6 /* main.m */; };
 		E49D473F1D65670C004FE1E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49D473E1D65670C004FE1E6 /* AppDelegate.m */; };
@@ -31,13 +30,13 @@
 		E4D7F00B1D6EEB7100F90383 /* HXHistoryLastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D7F0091D6EEB7100F90383 /* HXHistoryLastCell.xib */; };
 		E4D7F00E1D6EEF6600F90383 /* HXHistoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D7F00D1D6EEF6600F90383 /* HXHistoryListViewController.m */; };
 		E4E19A981D6D86380005B850 /* HXSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E19A971D6D86380005B850 /* HXSearchResultViewController.m */; };
+		E4E799F81D7018CD002CA5A1 /* xiaoguo.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4E799F71D7018CD002CA5A1 /* xiaoguo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6CFFC9D8934E7087422A23B4 /* Pods-HXTechnologyBlogCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXTechnologyBlogCrawler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXTechnologyBlogCrawler/Pods-HXTechnologyBlogCrawler.debug.xcconfig"; sourceTree = "<group>"; };
 		A3BA89A0927D1C82772CE9F6 /* Pods-HXTechnologyBlogCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXTechnologyBlogCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXTechnologyBlogCrawler/Pods-HXTechnologyBlogCrawler.release.xcconfig"; sourceTree = "<group>"; };
 		B87E942669A1B6F1637DA815 /* libPods-HXTechnologyBlogCrawler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HXTechnologyBlogCrawler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E411B6461D66E10E005E1F81 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E47972261D6830A400107AB1 /* HXRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRequestManager.h; sourceTree = "<group>"; };
 		E47972271D6830A400107AB1 /* HXRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRequestManager.m; sourceTree = "<group>"; };
 		E49D47371D65670C004FE1E6 /* HXTechnologyBlogCrawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXTechnologyBlogCrawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +75,8 @@
 		E4D7F00D1D6EEF6600F90383 /* HXHistoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHistoryListViewController.m; sourceTree = "<group>"; };
 		E4E19A961D6D86380005B850 /* HXSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSearchResultViewController.h; sourceTree = "<group>"; };
 		E4E19A971D6D86380005B850 /* HXSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSearchResultViewController.m; sourceTree = "<group>"; };
+		E4E799F51D701895002CA5A1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E4E799F71D7018CD002CA5A1 /* xiaoguo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = xiaoguo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E411B6471D66E10E005E1F81 /* CoreData.framework in Frameworks */,
 				E49D47791D6593FB004FE1E6 /* libxml2.tbd in Frameworks */,
 				4A0F42A33CC1E15C177DE4BB /* libPods-HXTechnologyBlogCrawler.a in Frameworks */,
 			);
@@ -113,6 +113,7 @@
 		E49D472E1D65670C004FE1E6 = {
 			isa = PBXGroup;
 			children = (
+				E4E799F51D701895002CA5A1 /* README.md */,
 				E49D47751D659050004FE1E6 /* Frameworks */,
 				E49D47391D65670C004FE1E6 /* HXTechnologyBlogCrawler */,
 				E49D47381D65670C004FE1E6 /* Products */,
@@ -137,6 +138,7 @@
 				E49D473E1D65670C004FE1E6 /* AppDelegate.m */,
 				E4A69B931D6AAE3300F84617 /* Main */,
 				E49D47461D65670C004FE1E6 /* Assets.xcassets */,
+				E4E799F71D7018CD002CA5A1 /* xiaoguo.gif */,
 				E49D474B1D65670C004FE1E6 /* Info.plist */,
 				E49D473A1D65670C004FE1E6 /* Supporting Files */,
 			);
@@ -167,7 +169,6 @@
 		E49D47751D659050004FE1E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E411B6461D66E10E005E1F81 /* CoreData.framework */,
 				E49D47781D6593FB004FE1E6 /* libxml2.tbd */,
 				B87E942669A1B6F1637DA815 /* libPods-HXTechnologyBlogCrawler.a */,
 			);
@@ -317,6 +318,7 @@
 				E4A69BAA1D6AAE3300F84617 /* HXDetailWebViewController.xib in Resources */,
 				E4D7F0061D6EE57400F90383 /* HXHistoryCell.xib in Resources */,
 				E4D7F00B1D6EEB7100F90383 /* HXHistoryLastCell.xib in Resources */,
+				E4E799F81D7018CD002CA5A1 /* xiaoguo.gif in Resources */,
 				E49D47471D65670C004FE1E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
