@@ -14,9 +14,7 @@
 
 #pragma mark - request
 
-////博客类型 1.@"csdn" CSDN博客  2.@"cnblogs" 博客园 3.@"51cto" 51CTO博客 4.@"oschina" 开源中国博客
-- (void)requestWithBlogType:(NSString *)blogType key:(NSString *)key page:(NSInteger)page complete:(void(^)(NSArray *dataAry,NSString *findCount))complete {
-    
+- (NSString *)requestWithBlogType:(NSString *)blogType key:(NSString *)key page:(NSInteger)page {
     NSString *urlStr;
     if ([blogType isEqualToString:@"csdn"]) {
         //CSDN博客 http://so.csdn.net/so/
@@ -33,6 +31,13 @@
         //开源中国博客 http://www.oschina.net/search
         urlStr = [NSString stringWithFormat:@"http://www.oschina.net/search?q=%@&scope=blog&fromerr=BlURTW5c&p=%ld",key,(long)page];
     }
+    return urlStr;
+}
+
+////博客类型 1.@"csdn" CSDN博客  2.@"cnblogs" 博客园 3.@"51cto" 51CTO博客 4.@"oschina" 开源中国博客
+- (void)requestWithBlogType:(NSString *)blogType key:(NSString *)key page:(NSInteger)page complete:(void(^)(NSArray *dataAry,NSString *findCount))complete {
+    
+    NSString *urlStr = [self requestWithBlogType:blogType key:key page:page];
     
     //将网址转化为UTF8编码
     NSString *urlStringUTF8 = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -107,7 +112,7 @@
     
     TFHpple *xpathParser = [[TFHpple alloc] initWithHTMLData:data];
     
-    NSArray *ary = [xpathParser searchWithXPathQuery:@"//dl[@class='search-list tracking-ad']"];
+    NSArray *ary = [xpathParser searchWithXPathQuery:@"//dl[@class='search-list']"];
     
     NSArray *findAry = [xpathParser searchWithXPathQuery:@"//span[@class='page-nav']"];
     
